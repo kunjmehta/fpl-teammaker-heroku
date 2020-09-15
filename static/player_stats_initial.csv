@@ -86,6 +86,7 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 79,235382,Steven,Alzate,Alzate,BHA,MID,a,FALSE,0,33,1.7,1181,0,0,3,18,0,0,0,1,0,0,0,45
 80,243016,Alexis,Mac Allister,Mac Allister,BHA,MID,a,FALSE,0,12,1.3,348,0,0,0,6,0,0,0,0,0,0,0,55
 503,108813,Christian,Walton,Walton,BHA,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
+528,49262,Jason,Steele,Steele,BHA,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
 81,17761,James,Tarkowski,Tarkowski,BUR,DEF,a,FALSE,0,143,3.8,3420,2,3,15,50,0,0,0,10,0,0,14,55
 82,17997,Phil,Bardsley,Bardsley,BUR,DEF,a,FALSE,0,78,3.7,1890,0,2,9,19,0,0,0,6,0,0,6,45
 83,39487,Erik,Pieters,Pieters,BUR,DEF,a,FALSE,0,77,3.2,1876,0,5,6,35,0,0,0,2,0,0,10,45
@@ -400,6 +401,7 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 509,199598,Ethan,Ampadu,Ampadu,SHU,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
 510,226182,Jayden,Bogle,Bogle,SHU,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
 511,155197,Max,Lowe,Lowe,SHU,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
+529,7645,Phil,Jagielka,Jagielka,SHU,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
 361,20452,Shane,Long,Long,SOU,FWD,a,FALSE,0,62,2.4,1386,2,3,5,20,0,0,0,0,0,0,4,55
 362,40146,Ryan,Bertrand,Bertrand,SOU,DEF,a,FALSE,0,75,2.3,2742,1,1,7,52,0,0,0,3,1,0,0,50
 363,58376,Alex,McCarthy,McCarthy,SOU,GKP,a,FALSE,0,104,3.7,2520,0,0,7,35,0,1,0,0,0,79,8,45
