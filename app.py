@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 from fpl import predict_team, get_overview_data, extract_player_roster, \
 extract_teams_data, extract_player_types
+import matplotlib.pyplot as plt
+import numpy as np
 
 pd.options.display.float_format = "{:,.2f}".format
 
@@ -81,15 +83,18 @@ elif gw > 1 and gw <= 4:
 								 separated list of player codes you have in your team. \
 								 Note that they are ordered alphabetically by team name.', \
 								 player_df)
-		current_team = st.text_input('')
-		current_team = list(map(int, current_team.split(',')))
+		try:
+			current_team = st.text_input('')
+			current_team = list(map(int, current_team.split(',')))
+		except:
+			st.error('Please enter an input above')
 
 	else:
 		st.write('Starting below, please provide how many players you want from each team.\
 		Use this in cases when a particular team does not have a fixture for the week.')
 		max_players_from_team = get_team_limit(max_players_from_team)
 
-else:
+elif gw > 4 and gw <=38:
 	transfer_or_wildcard = st.radio('Select your mode of team making:', ('Transfer',\
 								'New Team / Wildcard'))
 	if transfer_or_wildcard == 'Transfer':
@@ -114,8 +119,11 @@ else:
 								 separated list of player codes you have in your team. \
 								 Note that they are ordered alphabetically by team name.', \
 								 player_df)
-		current_team = st.text_input('')
-		current_team = list(map(int, current_team.split(',')))
+		try:
+			current_team = st.text_input('')
+			current_team = list(map(int, current_team.split(',')))
+		except:
+			st.error('Please enter an input above')
 
 	else:
 		st.write('Starting below, please provide how many players you want from each team.\
@@ -123,11 +131,65 @@ else:
 		max_players_from_team = get_team_limit(max_players_from_team)
 
 if st.button('Get Team'):
+
+	if gw > 38:
+		st.error('Enter correct GW')
+
 	team, points, cost = predict_team(transfer, wildcard, gw, budget, old_data_weight, \
 				 new_data_weight, form_weight, max_players_from_team, \
 				 current_team, num_transfers)
 	team['Cost'] /= 10
 	team = team.rename(columns = {"First": "First Name", "Second": "Second Name"})
-	st.write(team)
-	st.write('Potential points of whole team:', points)
-	st.write('Cost of the team:', cost)
+	if len(team) > 0:
+		st.write(team)
+		st.write('Total points of whole team:', points)
+		st.write('Cost of the team:', cost)
+	else:
+		st.info('Please use this feature after GW4 has completed')
+
+
+st.markdown("<h1 style='text-align: center;'>Visualization of Results</h1>", unsafe_allow_html=True)
+
+
+bot101_points = np.array([0, 84, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+
+new_team_every_week_points = np.array([0, 84, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+
+bot101_rank = np.array([0, 175178, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+
+bot101_gwrank = np.array([0, 175178, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+gameweeks = [i for i in range(0, 39)]
+
+ax = plt.gca()
+ax.set_xlim(0,39)
+plt.plot(gameweeks, bot101_points, label = 'Points of Entered Team')
+plt.plot(gameweeks, new_team_every_week_points, label = 'Points if New Team Entered Every Week')
+plt.xlabel('Gameweeks')
+plt.ylabel('Total Points')
+plt.title('Total Points Viewed per Week')
+plt.legend()
+st.pyplot()
+
+ax = plt.gca()
+ax.invert_yaxis()
+
+ax.set_xlim(0,39)
+plt.plot(gameweeks, bot101_rank, label = 'Overall Rank')
+plt.plot(gameweeks, bot101_gwrank, label = 'GW Rank')
+plt.xlabel('Gameweeks')
+plt.ylabel('Ranking')
+plt.title('Ranks of Entered Team Viewed per Week')
+plt.legend()
+st.pyplot()

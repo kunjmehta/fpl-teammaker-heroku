@@ -198,8 +198,12 @@ def add_players_using_lp(metric, costs, player_type, team, budget, team_counts,\
         team_counts[team_code]
 
     model += sum(decisions) == 11  # total team size
-    model.solve()
-    
+
+    try:
+    	model.solve()
+    except:
+    	st.info('Player roster has not been updated yet. Please be patient')
+
     return decisions
 
 
@@ -235,7 +239,10 @@ def transfer_players_using_lp(metric, costs, player_type, team, budget, team_cou
         team_counts[team_code]
 
     model += sum(decisions) == num_transfers  # total players to be transferred
-    model.solve()
+    try:
+    	model.solve()
+    except:
+    	st.info('Player roster has not been updated yet. Please be patient')
     
     return decisions
 
@@ -473,7 +480,7 @@ def analyze_using_mixed_season_data(max_players_from_team, transfer, wildcard, g
                                                               isin(players_in_team)]
         # Just in case rows don't match
         # mixed_available_players = mixed_available_players.dropna()
-        print(mixed_available_players[mixed_available_players['total_points'].isna()])
+        # print(mixed_available_players[mixed_available_players['total_points'].isna()])
         
         # Use LP to find other players based on metric
         decisions = add_players_using_lp(mixed_available_players['metric'].values, \
