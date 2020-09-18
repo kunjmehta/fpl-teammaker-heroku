@@ -477,6 +477,7 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 446,179830,Grady,Diangana,Diangana,WBA,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55
 481,210407,Matheus,Pereira,Pereira,WBA,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60
 499,183015,Cedric,Kipre,Kipre,WBA,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
+530,41135,Branislav,Ivanovic,Ivanovic,WBA,DEF,d,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
 427,18073,Mark,Noble,Noble,WHU,MID,a,FALSE,0,105,3.2,2675,4,4,7,44,0,0,0,5,0,0,8,50
 428,18987,Robert,Snodgrass,Snodgrass,WHU,MID,a,FALSE,0,87,3.6,1504,5,5,3,33,0,0,0,4,0,0,8,60
 429,19194,David,Martin,Martin,WHU,GKP,a,FALSE,0,20,4,435,0,0,2,6,0,0,0,1,0,15,2,40
