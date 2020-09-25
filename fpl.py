@@ -373,6 +373,8 @@ def analyze_using_mixed_season_data(max_players_from_team, transfer, wildcard, g
     #                                                      >= 45]
 
     # mixed_available_players = mixed_available_players.dropna()
+    # print(mixed_available_players[mixed_available_players.isna().any(axis=1)])
+    # print(len(mixed_available_players), len(current_available_players))
 
     # giving best performing player irrespective of whether his team plays in the next GW
     if transfer:
@@ -405,14 +407,20 @@ def analyze_using_mixed_season_data(max_players_from_team, transfer, wildcard, g
                 team_cost -= transfer_out.iloc[i]['now_cost']
             mixed_available_players = mixed_available_players[~mixed_available_players \
                                         ['second_name'].isin(current_team_df['second_name'].tolist())]
-            mixed_available_players = mixed_available_players.append(transfer_out)
+            # mixed_available_players = mixed_available_players.append(transfer_out)
+            print(transfer_out)
         
         # if no injured players, then remove least performing player
-        else:
+        if len(transfer_out) == 0 or num_transfers > len(transfer_out):
+            prev_len = len(transfer_out)
             current_team_df = current_team_df.copy().sort_values(by = ['metric'], \
                                                                  ascending = True)
-            transfer_out = current_team_df[:num_transfers]
-            for i in range(len(transfer_out)):
+            current_team_df = current_team_df[~current_team_df \
+                                        ['second_name'].isin(transfer_out['second_name'].tolist())]
+            print(current_team_df)
+            transfer_out = transfer_out.append(current_team_df[:(num_transfers - len(transfer_out))])
+            print(transfer_out)
+            for i in range(prev_len, len(transfer_out)):
                 positions_filled[transfer_out.iloc[i]['player_type']] -= 1
                 teams_filled[transfer_out.iloc[i]['team_code']] += 1
                 team_points -= transfer_out.iloc[i]['current_points']
