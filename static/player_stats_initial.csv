@@ -10,7 +10,6 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 9,84450,Granit,Xhaka,Xhaka,ARS,MID,a,FALSE,0,73,2.4,2586,1,2,10,31,0,0,0,10,0,0,2,55
 10,92371,Pablo,Marí,Marí,ARS,DEF,i,FALSE,0,8,4,113,0,0,1,0,0,0,0,0,0,0,1,45
 11,98745,Héctor,Bellerín,Bellerín,ARS,DEF,a,FALSE,0,44,2.9,1156,1,0,4,18,0,0,0,2,0,0,4,50
-12,98980,Emiliano,Martínez,Martínez,ARS,GKP,a,FALSE,0,33,3.7,770,0,0,3,9,0,0,0,2,0,34,1,45
 13,101184,Calum,Chambers,Chambers,ARS,DEF,i,FALSE,0,42,3,1102,1,1,3,15,0,0,0,5,0,0,5,45
 14,111457,Sead,Kolasinac,Kolasinac,ARS,DEF,a,FALSE,0,55,2.1,1694,0,2,4,26,0,0,0,4,0,0,1,50
 15,154043,Ainsley,Maitland-Niles,Maitland-Niles,ARS,DEF,a,FALSE,0,41,2,1382,0,2,3,22,0,0,0,4,1,0,3,50
@@ -31,6 +30,8 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 501,182539,Daniel,Ceballos Fernández,Ceballos,ARS,MID,a,FALSE,0,57,2.4,1687,0,2,7,21,0,0,0,1,0,0,3,50
 526,153256,Mohamed Naser,El Sayed Elneny,Elneny,ARS,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
 527,113534,Matt,Macey,Macey,ARS,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
+547,115918,Rúnar Alex,Rúnarsson,Rúnarsson,ARS,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
+12,98980,Emiliano,Martínez,Martínez,AVL,GKP,a,FALSE,0,33,3.7,770,0,0,3,9,0,0,0,2,0,34,1,45
 28,21205,Tom,Heaton,Heaton,AVL,GKP,i,FALSE,0,59,3,1794,0,0,4,35,1,0,0,0,0,67,3,45
 29,37339,Ahmed,El Mohamady,El Mohamady,AVL,DEF,a,FALSE,0,39,2.2,1024,1,1,2,28,0,0,0,1,0,0,7,45
 30,40564,Henri,Lansbury,Lansbury,AVL,MID,a,FALSE,0,12,1.2,190,0,0,0,6,0,0,0,0,0,0,0,45
@@ -58,6 +59,7 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 52,230046,Douglas Luiz,Soares de Paulo,Douglas Luiz,AVL,MID,a,FALSE,0,90,2.5,2604,3,2,8,51,0,0,0,8,0,0,5,50
 496,199796,Matthew,Cash,Cash,AVL,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50
 514,178301,Ollie,Watkins,Watkins,AVL,FWD,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60
+540,110504,Bertrand,Traoré,Traoré,AVL,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60
 53,20529,Glenn,Murray,Murray,BHA,FWD,n,FALSE,0,36,1.6,785,1,1,2,10,0,0,0,0,0,0,0,50
 54,39155,Adam,Lallana,Lallana,BHA,MID,a,FALSE,0,27,1.8,371,1,1,1,5,0,0,0,1,0,0,1,65
 55,40845,Dale,Stephens,Stephens,BHA,MID,a,FALSE,0,63,1.9,2525,0,1,6,42,0,0,0,8,0,0,1,45
@@ -109,6 +111,8 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 100,433154,Dwight,McNeil,McNeil,BUR,MID,a,FALSE,0,123,3.2,3339,2,7,16,48,0,0,0,5,0,0,6,60
 519,218023,Jimmy,Dunne,Dunne,BUR,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
 520,461102,Bobby,Thomas,Thomas,BUR,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
+535,217401,Josh,Benson,Benson,BUR,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
+536,195471,Anthony,Driscoll-Glennon,Driscoll-Glennon,BUR,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
 101,20310,Willy,Caballero,Caballero,CHE,GKP,a,FALSE,0,13,2.6,450,0,0,1,7,0,0,0,0,0,10,0,50
 102,41328,César,Azpilicueta,Azpilicueta,CHE,DEF,a,FALSE,0,130,3.6,3229,2,6,8,53,0,0,0,1,0,0,16,60
 103,44346,Olivier,Giroud,Giroud,CHE,FWD,a,FALSE,0,68,3.8,988,8,1,6,16,0,0,0,1,0,0,5,70
@@ -135,6 +139,7 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 232,172850,Benjamin,Chilwell,Chilwell,CHE,DEF,i,FALSE,0,114,4.2,2374,3,3,9,26,0,0,0,3,0,0,8,55
 490,51090,Thiago,Thiago,Thiago Silva,CHE,DEF,d,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55
 500,219847,Kai,Havertz,Havertz,CHE,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,85
+548,228286,Edouard,Mendy,Mendy,CHE,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50
 108,94245,Michy,Batshuayi,Batshuayi,CRY,FWD,a,FALSE,0,28,1.8,224,1,2,0,8,0,0,0,0,0,0,1,60
 125,19419,Gary,Cahill,Cahill,CRY,DEF,i,FALSE,0,70,2.8,2167,0,1,7,35,0,0,0,1,0,0,4,45
 126,20066,Wayne,Hennessey,Hennessey,CRY,GKP,a,FALSE,0,7,2.3,270,0,0,0,8,0,0,0,0,0,16,0,45
@@ -162,6 +167,7 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 486,19188,Scott,Dann,Dann,CRY,DEF,a,FALSE,0,51,3.2,1264,0,1,5,14,0,0,0,0,0,0,3,45
 489,232413,Eberechi,Eze,Eze,CRY,MID,d,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60
 522,221272,Sam,Woods,Woods,CRY,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
+534,114536,Ryan,Inniss,Inniss,CRY,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
 148,20467,Theo,Walcott,Walcott,EVE,MID,a,FALSE,0,63,2.5,1281,2,4,4,19,0,0,0,1,0,0,1,60
 149,41823,Fabian,Delph,Delph,EVE,MID,d,FALSE,0,24,1.5,1187,0,0,2,24,0,0,0,3,1,0,2,50
 150,55422,Gylfi,Sigurdsson,Sigurdsson,EVE,MID,a,FALSE,0,95,2.7,2555,2,4,6,45,0,0,0,3,0,0,7,70
@@ -242,6 +248,7 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 240,244619,Luke,Thomas,Thomas,LEI,DEF,a,FALSE,0,15,5,267,0,1,1,4,0,0,0,0,0,0,3,45
 498,166477,Timothy,Castagne,Castagne,LEI,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55
 518,86881,Nampalys,Mendy,Mendy,LEI,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
+541,228798,Cengiz,Ünder,Ünder,LEI,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60
 193,28690,Pablo,Hernández Domínguez,Hernández,LEE,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60
 194,39790,Francisco,Casilla Cortés,Casilla,LEE,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
 195,55914,Liam,Cooper,Cooper,LEE,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
@@ -267,6 +274,8 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 215,467114,Oliver,Casey,Casey,LEE,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
 491,193645,Robin,Koch,Koch,LEE,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
 492,80954,Rodrigo,Moreno,Rodrigo,LEE,FWD,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60
+532,463912,Elia,Caprile,Caprile,LEE,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
+533,480216,Mateusz,Bogusz,Bogusz,LEE,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
 241,15157,James,Milner,Milner,LIV,MID,a,FALSE,0,49,2.2,924,2,2,4,9,0,0,0,4,0,0,3,55
 242,214285,Konstantinos,Tsimikas,Tsimikas,LIV,DEF,d,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50
 243,41733,Georginio,Wijnaldum,Wijnaldum,LIV,MID,a,FALSE,0,107,2.9,2933,4,0,12,28,0,0,0,0,0,0,5,55
@@ -292,6 +301,8 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 263,206915,Curtis,Jones,Jones,LIV,MID,a,FALSE,0,13,2.2,121,1,0,1,1,0,0,0,0,0,0,0,45
 264,215136,Neco,Williams,Williams,LIV,DEF,a,FALSE,0,14,2.3,228,0,0,1,2,0,0,0,1,0,0,3,40
 265,444884,Harvey,Elliott,Elliott,LIV,MID,a,FALSE,0,2,1,7,0,0,0,0,0,0,0,0,0,0,0,45
+468,194634,Diogo,Jota,Jota,WOL,MID,a,FALSE,0,105,3.1,2278,7,3,10,28,0,0,0,4,0,0,12,65
+531,61558,Thiago,Alcántara do Nascimento,Thiago,LIV,MID,a,FALSE,1,1,1,45,0,0,0,0,0,0,0,0,0,0,0,60
 266,27789,Fernando,Luiz Rosa,Fernandinho,MCI,DEF,a,FALSE,0,55,1.8,2394,0,1,10,27,1,0,0,7,2,0,1,55
 267,33148,Claudio,Bravo,Bravo,MCI,GKP,u,FALSE,0,11,2.8,346,0,0,1,7,0,0,0,0,0,8,0,45
 268,37572,Sergio,Agüero,Agüero,MCI,FWD,a,FALSE,0,132,5.5,1449,16,6,5,18,0,0,1,1,0,0,14,105
@@ -315,6 +326,9 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 286,220566,Rodrigo,Hernandez,Rodrigo,MCI,MID,a,FALSE,0,92,2.6,2480,3,2,14,27,0,0,0,8,0,0,5,55
 287,224444,Ferran,Torres,Torres,MCI,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,70
 288,432656,Eric,Garcia,Garcia,MCI,DEF,a,FALSE,0,38,2.9,790,0,0,5,7,0,0,0,1,0,0,0,50
+537,449926,Adrián,Bernabé,Bernabé,MCI,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
+538,164484,Zack,Steffen,Steffen,MCI,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
+539,463034,Liam,Delap,Delap,MCI,FWD,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
 289,42899,Sergio,Romero,Romero,MUN,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50
 290,43670,Juan,Mata,Mata,MUN,MID,a,FALSE,0,38,2,747,0,2,4,8,0,0,0,1,0,0,2,60
 291,51940,David,de Gea,de Gea,MUN,GKP,a,FALSE,0,143,3.8,3420,0,0,13,36,0,0,0,2,0,95,8,55
@@ -453,6 +467,8 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 457,87835,Matt,Doherty,Doherty,TOT,DEF,a,FALSE,0,167,4.6,2836,4,8,12,31,0,0,0,1,0,0,15,60
 482,15749,Joe,Hart,Hart,TOT,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
 521,168763,Cameron,Carter-Vickers,Carter-Vickers,TOT,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
+542,199249,Sergio,Reguilón,Reguilón,TOT,DEF,d,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55
+543,36903,Gareth,Bale,Bale,TOT,MID,d,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,95
 56,50093,David,Button,Button,WBA,GKP,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
 358,171975,Callum,Robinson,Callum Robinson,WBA,FWD,a,FALSE,0,33,2.1,669,1,2,2,6,0,0,0,1,0,0,1,55
 407,42427,Kieran,Gibbs,Gibbs,WBA,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
@@ -478,6 +494,7 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 481,210407,Matheus,Pereira,Pereira,WBA,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,60
 499,183015,Cedric,Kipre,Kipre,WBA,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
 530,41135,Branislav,Ivanovic,Ivanovic,WBA,DEF,d,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
+544,232787,Conor,Gallagher,Gallagher,WBA,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55
 427,18073,Mark,Noble,Noble,WHU,MID,a,FALSE,0,105,3.2,2675,4,4,7,44,0,0,0,5,0,0,8,50
 428,18987,Robert,Snodgrass,Snodgrass,WHU,MID,a,FALSE,0,87,3.6,1504,5,5,3,33,0,0,0,4,0,0,8,60
 429,19194,David,Martin,Martin,WHU,GKP,a,FALSE,0,20,4,435,0,0,2,6,0,0,0,1,0,15,2,40
@@ -517,7 +534,6 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 465,159533,Adama,Traoré,Traoré,WOL,MID,a,FALSE,0,130,3.5,2599,4,9,7,33,0,0,0,1,0,0,14,65
 466,171317,Rúben Diogo,da Silva Neves,Neves,WOL,MID,a,FALSE,0,97,2.6,3053,2,2,13,35,0,0,0,9,0,0,7,55
 467,179456,Oskar,Buur,Buur,WOL,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,40
-468,194634,Diogo,Jota,Jota,WOL,MID,a,FALSE,0,105,3.1,2278,7,3,10,28,0,0,0,4,0,0,12,65
 469,200600,Daniel,Castelo Podence,Podence,WOL,MID,a,FALSE,0,25,2.8,285,1,1,3,0,0,0,0,0,0,0,2,55
 470,214048,Max,Kilman,Kilman,WOL,DEF,a,FALSE,0,5,1.7,184,0,0,0,2,0,0,0,0,0,0,0,40
 471,216054,Rúben Gonçalo,Silva Nascimento Vinagre,Vinagre,WOL,DEF,a,FALSE,0,32,2,644,0,0,3,6,0,0,0,1,0,0,1,45
@@ -529,3 +545,5 @@ id,code,first_name,second_name,web_name,team_code,player_type,status,in_dreamtea
 504,449988,Fabio,Silva,Fabio Silva,WOL,FWD,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55
 505,111291,Fernando,Marçal,Marçal,WOL,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50
 515,437858,Vitor,Ferreira,Vitinha,WOL,MID,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50
+545,441271,Ki-Jana,Hoever,Hoever,WOL,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,45
+546,200402,Nélson,Cabral Semedo,Semedo,WOL,DEF,a,FALSE,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,55
