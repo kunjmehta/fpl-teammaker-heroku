@@ -415,11 +415,12 @@ def analyze_using_mixed_season_data(max_players_from_team, transfer, wildcard, g
             prev_len = len(transfer_out)
             current_team_df = current_team_df.copy().sort_values(by = ['metric'], \
                                                                  ascending = True)
-            current_team_df = current_team_df[~current_team_df \
+            if len(transfer_out) > 0:
+            	current_team_df = current_team_df[~current_team_df \
                                         ['second_name'].isin(transfer_out['second_name'].tolist())]
-            print(current_team_df)
+            # print(current_team_df)
             transfer_out = transfer_out.append(current_team_df[:(num_transfers - len(transfer_out))])
-            print(transfer_out)
+            # print(transfer_out)
             for i in range(prev_len, len(transfer_out)):
                 positions_filled[transfer_out.iloc[i]['player_type']] -= 1
                 teams_filled[transfer_out.iloc[i]['team_code']] += 1
