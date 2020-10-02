@@ -151,28 +151,28 @@ if st.button('Get Team'):
 st.markdown("<h1 style='text-align: center;'>Visualization of Results</h1>", unsafe_allow_html=True)
 
 
-bot101_points = np.array([0, 84, 133, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+bot101_points = np.array([0, 84, 133, 180, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-new_team_every_week_points = np.array([0, 84, 134, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+new_team_every_week_points = np.array([0, 84, 126, 180, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-average_points = np.array([0, 50, 109, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+average_points = np.array([0, 50, 109, 152, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
 
-bot101_rank = np.array([0, 175178, 881887, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+bot101_rank = np.array([0, 0.175178, 0.881887, 0.797683, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-bot101_gwrank = np.array([0, 175178, 4534625, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+bot101_gwrank = np.array([0, 0.175178, 4.534625, 1.174666, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
@@ -187,16 +187,20 @@ plt.xlabel('Gameweeks')
 plt.ylabel('Total Points')
 plt.title('Total Points Viewed per Week')
 plt.legend()
+plt.locator_params(axis="x", nbins=38)
 st.pyplot()
 
 ax = plt.gca()
 ax.invert_yaxis()
+ax.ticklabel_format(useOffset=False, style = 'plain') 
+plt.locator_params(axis="y", nbins=20)
+plt.locator_params(axis="x", nbins=38)
 
 ax.set_xlim(0,39)
 plt.plot(gameweeks, bot101_rank, label = 'Overall Rank')
 plt.plot(gameweeks, bot101_gwrank, label = 'GW Rank')
 plt.xlabel('Gameweeks')
-plt.ylabel('Ranking')
+plt.ylabel('Ranking (in millions)')
 plt.title('Ranks of Entered Team Viewed per Week')
 plt.legend()
 st.pyplot()
