@@ -407,8 +407,10 @@ def analyze_using_mixed_season_data(max_players_from_team, transfer, wildcard, g
                 team_cost -= transfer_out.iloc[i]['now_cost']
             mixed_available_players = mixed_available_players[~mixed_available_players \
                                         ['second_name'].isin(current_team_df['second_name'].tolist())]
+            current_available_players = current_available_players[~current_available_players \
+                                        ['second_name'].isin(current_team_df['second_name'].tolist())]
             # mixed_available_players = mixed_available_players.append(transfer_out)
-            print(transfer_out)
+            # print(transfer_out)
         
         # if no injured players, then remove least performing player
         if len(transfer_out) == 0 or num_transfers > len(transfer_out):
@@ -428,7 +430,9 @@ def analyze_using_mixed_season_data(max_players_from_team, transfer, wildcard, g
                 team_cost -= transfer_out.iloc[i]['now_cost']
             mixed_available_players = mixed_available_players[~mixed_available_players \
                                         ['second_name'].isin(current_team_df['second_name'].tolist())]
-            mixed_available_players = mixed_available_players.append(transfer_out)
+            current_available_players = current_available_players[~current_available_players \
+                                        ['second_name'].isin(current_team_df['second_name'].tolist())]
+            current_available_players = current_available_players.append(transfer_out)
             
         # here 'budget' is remaining budget from previous week
         decisions = transfer_players_using_lp(mixed_available_players['metric'].values, \
