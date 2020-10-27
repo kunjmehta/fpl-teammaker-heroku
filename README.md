@@ -27,4 +27,4 @@ given by this application stands in the top 10 percentile.
 
 ### Website 
 
-You can access and use the application [here](fpl-teammaker.herkouapp.com)
+You can access and use the application [here](https://fpl-teammaker.herokuapp.com)
