@@ -151,28 +151,28 @@ if st.button('Get Team'):
 st.markdown("<h1 style='text-align: center;'>Visualization of Results</h1>", unsafe_allow_html=True)
 
 
-bot101_points = np.array([0, 84, 133, 180, 222, 294, 349, np.nan, np.nan\
+bot101_points = np.array([0, 84, 133, 180, 222, 294, 349, 401, 470\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-new_team_every_week_points = np.array([0, 84, 126, 180, 220, 292, 342, np.nan, np.nan\
+new_team_every_week_points = np.array([0, 84, 126, 180, 220, 292, 342, 404, 459\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-average_points = np.array([0, 50, 109, 152, 200, 260, 308, np.nan, np.nan\
+average_points = np.array([0, 50, 109, 152, 200, 260, 308, 361, 416\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
 
-bot101_rank = np.array([0, 0.175178, 0.881887, 0.797683, 1.412642, 1.056323, 0.915314, np.nan, np.nan\
+bot101_rank = np.array([0, 0.175178, 0.881887, 0.797683, 1.412642, 1.056323, 0.915314, 1.0164, 0.785028\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-bot101_gwrank = np.array([0, 0.175178, 4.534625, 1.174666, 4.348521, 1.728420, 2.062787, np.nan, np.nan\
+bot101_gwrank = np.array([0, 0.175178, 4.534625, 1.174666, 4.348521, 1.728420, 2.062787, 3.960282, 1.105014\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
