@@ -152,27 +152,27 @@ st.markdown("<h1 style='text-align: center;'>Visualization of Results</h1>", uns
 
 
 bot101_points = np.array([0, 84, 133, 180, 222, 294, 349, 401, 470\
-, 551, 593, 662, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, 551, 593, 662, 723, 774, 866, 914, 965, 1028, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
 new_team_every_week_points = np.array([0, 84, 126, 180, 220, 292, 342, 404, 459\
-, 526, 569, 631, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, 526, 569, 631, 685, 728, 790, 839, 890, 942, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
 average_points = np.array([0, 50, 109, 152, 200, 260, 308, 361, 416\
-, 471, 515, 577, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, 471, 515, 577, 628, 670, 730, 771, 808, 864, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
 bot101_rank = np.array([0, 0.175178, 0.881887, 0.797683, 1.412642, 1.056323, 0.915314, 1.0164, 0.785028\
-, 0.378354, 0.515661, 0.522446, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, 0.378354, 0.515661, 0.522446, 0.495127, 0.426231, 0.218577, 0.226317, 0.191098, 0.204354, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
 bot101_gwrank = np.array([0, 0.175178, 4.534625, 1.174666, 4.348521, 1.728420, 2.062787, 3.960282, 1.105014\
-, 0.247396, 2.6096, 2.559066, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, 0.247396, 2.6096, 2.559066, 1.815474, 1.603100, 0.178608, 2.406347, 0.969028, 2.743019, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 gameweeks = [i for i in range(0, 39)]
