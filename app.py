@@ -152,36 +152,39 @@ st.markdown("<h1 style='text-align: center;'>Visualization of Results</h1>", uns
 
 
 bot101_points = np.array([0, 84, 133, 180, 222, 294, 349, 401, 470\
-, 551, 593, 662, 723, 774, 866, 914, 965, 1028, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
-
-new_team_every_week_points = np.array([0, 84, 126, 180, 220, 292, 342, 404, 459\
-, 526, 569, 631, 685, 728, 790, 839, 890, 942, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, 551, 593, 662, 723, 774, 866, 914, 965, 1028, 1070\
+,  1151, 1196, 1268, 1352, 1403, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
 average_points = np.array([0, 50, 109, 152, 200, 260, 308, 361, 416\
-, 471, 515, 577, 628, 670, 730, 771, 808, 864, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, 471, 515, 577, 628, 670, 730, 771, 808, 864, 894\
+, 968, 1010, 1058, 1115, 1173, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
 bot101_rank = np.array([0, 0.175178, 0.881887, 0.797683, 1.412642, 1.056323, 0.915314, 1.0164, 0.785028\
-, 0.378354, 0.515661, 0.522446, 0.495127, 0.426231, 0.218577, 0.226317, 0.191098, 0.204354, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, 0.378354, 0.515661, 0.522446, 0.495127, 0.426231, 0.218577, 0.226317, 0.191098, 0.204354, 0.219032\
+, 0.302307, 0.318217, 0.224458, 0.183696, 0.275990, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
 bot101_gwrank = np.array([0, 0.175178, 4.534625, 1.174666, 4.348521, 1.728420, 2.062787, 3.960282, 1.105014\
-, 0.247396, 2.6096, 2.559066, 1.815474, 1.603100, 0.178608, 2.406347, 0.969028, 2.743019, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+, 0.247396, 2.6096, 2.559066, 1.815474, 1.603100, 0.178608, 2.406347, 0.969028, 2.743019, 1.780634\
+, 2.626326, 2.934196, 0.699079, 0.497828, 5.061059, np.nan, np.nan, np.nan, np.nan, np.nan\
 , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+
+bot101_gw_points = np.array([0, 84, 49, 55, 42, 72, 55, 52, 69, 81, 50, 69, 61, 51, 92, 48, 51, 63, \
+42, 81, 45, 72, 88, 55, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+
+bot101_gw_avg_points = np.array([0, 50, 59, 43, 48, 60, 48, 53, 55, 55, 44, 62, 51, 42, 60, 41, 37, \
+56, 30, 74, 42, 48, 57, 58, np.nan, np.nan, np.nan, np.nan, np.nan\
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+
 gameweeks = [i for i in range(0, 39)]
 
 ax = plt.gca()
 ax.set_xlim(0,39)
-plt.plot(gameweeks, bot101_points, label = 'Points of Entered Team')
-plt.plot(gameweeks, new_team_every_week_points, label = 'Points if New Team Entered Every Week')
-plt.plot(gameweeks, average_points, label = 'Average Points Viewed Every Week')
+plt.plot(gameweeks, bot101_points, label = 'Cumulative Team Points')
+plt.plot(gameweeks, average_points, label = 'Cumulative Average Points')
 plt.xlabel('Gameweeks')
 plt.ylabel('Total Points')
 plt.title('Total Points Viewed per Week')
@@ -200,6 +203,17 @@ plt.plot(gameweeks, bot101_rank, label = 'Overall Rank')
 plt.plot(gameweeks, bot101_gwrank, label = 'GW Rank')
 plt.xlabel('Gameweeks')
 plt.ylabel('Ranking (in millions)')
-plt.title('Ranks of Entered Team Viewed per Week')
+plt.title('Overall vs GW Rank')
 plt.legend()
+st.pyplot()
+
+ax = plt.gca()
+ax.set_xlim(0,39)
+plt.plot(gameweeks, bot101_gw_points, label = 'Team Points per Gameweek')
+plt.plot(gameweeks, bot101_gw_avg_points, label = 'Average Points per Gameweek')
+plt.xlabel('Gameweeks')
+plt.ylabel('Points')
+plt.title('Points per Week')
+plt.legend()
+plt.locator_params(axis="x", nbins=38)
 st.pyplot()
