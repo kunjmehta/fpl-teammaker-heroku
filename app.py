@@ -159,7 +159,7 @@ bot101_points = np.array([0, 84, 133, 180, 222, 294, 349, 401, 470\
 average_points = np.array([0, 50, 109, 152, 200, 260, 308, 361, 416\
 , 471, 515, 577, 628, 670, 730, 771, 808, 864, 894\
 , 968, 1010, 1058, 1115, 1173, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
 bot101_rank = np.array([0, 0.175178, 0.881887, 0.797683, 1.412642, 1.056323, 0.915314, 1.0164, 0.785028\
 , 0.378354, 0.515661, 0.522446, 0.495127, 0.426231, 0.218577, 0.226317, 0.191098, 0.204354, 0.219032\
