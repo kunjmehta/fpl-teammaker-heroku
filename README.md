@@ -11,8 +11,7 @@ standings in the Fantasy Premier League.
 * **Challenge:** Analyzing and recognizing the appropriate features that can provide the best prediction with regards to the team, and deploying the application without
 hassles.
 
-* **Accomplishment:** The application has been deployed on Heroku and at the time of writing, the team entered in the Fantasy Premier League using the predicted teams
-given by this application stands in the top 10 percentile.
+* **Accomplishment:** The application has been deployed on Heroku and the team that was entered into the competition on the basis of the results obtained from this application finished in the top 2% of players out of a total of 8 million.
 
 ***
 
@@ -28,3 +27,6 @@ given by this application stands in the top 10 percentile.
 ### Website 
 
 You can access and use the application [here](https://fpl-teammaker.herokuapp.com)
+
+### Article 
+An article covering the use of data analysis in fantasy contests with this application as the case study can be found on [Medium](https://towardsdatascience.com/fantasy-premier-league-x-data-analysis-being-among-the-top-2-98a714a1d170?gi=dba0497b9cd)
