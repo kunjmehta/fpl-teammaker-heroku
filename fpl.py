@@ -23,8 +23,8 @@ def extract_teams_data(overview_data_json):
     teams_df = pd.DataFrame(teams_json)
     teams_df = teams_df[['code', 'name', 'short_name', 'position', 'played', 'win', 'draw', \
                          'loss', 'points']]
-    teams_df['past_position'] = pd.Series([8, 17, 15, 10, 4, 14, 12, 99, 5, 99, 1, 2, 3, 13, \
-                                           9, 11, 6, 16, 99, 7])
+    teams_df['past_position'] = pd.Series([8, 11, 99, 16, 17, 4, 14, 10, 9, 5, 3, 1, 2, 12, \
+                                           99, 15, 7, 99, 6, 13])
 
     return teams_df
 
@@ -97,6 +97,11 @@ def get_injured_player_list():
 '''For GW1 and GW4+, get the top scorers for each position, the DT picks'''
 def get_top_scorers(top_team_players, positions_filled, teams_filled):
     top_players_point_sort = top_team_players.sort_values(by='total_points', ascending = False)
+    
+    # LOGGING
+    # print(top_team_players)
+    # print(top_players_point_sort)
+    # print(teams_filled)
     
     top_players_positions_to_be_filled = {'GKP':1, 'DEF':1, 'MID': 1, 'FWD': 1}
     top_players_positions_filled = {'GKP':0, 'DEF':0, 'MID': 0, 'FWD': 0}
@@ -267,6 +272,10 @@ def analyze_using_old_season_data(max_players_from_team, transfer, wildcard, gw,
     # Initialize data structures to track constraints
     positions_filled = {'GKP': 2, 'DEF': 5, 'MID': 5, 'FWD': 3}
     teams_filled = max_players_from_team
+
+    # LOGGING
+    # print(max_players_from_team)
+    # print(teams_filled)
     
     # Add the best point scorers for each position into the team
     predicted_team, team_cost, team_points, positions_filled, teams_filled, players_in_team = \
@@ -314,7 +323,8 @@ def analyze_using_mixed_season_data(max_players_from_team, transfer, wildcard, g
     initial_player_df = pd.read_csv('static/player_stats_initial.csv')
     
     # CHANGE THIS DURING DEPLOYMENT. This is dummy data
-    # current_player_df = pd.read_csv('player_stats_initial.csv')
+    # current_player_df = pd.read_csv('static/player_stats_initial.csv')
+
     teams_df = extract_teams_data(overview_data_json)
     player_types_df = extract_player_types(overview_data_json)
     current_player_df = extract_player_roster(overview_data_json, player_types_df, teams_df)
@@ -532,7 +542,8 @@ def analyze_using_new_season_data(max_players_from_team, transfer, wildcard, gw,
     mixed_player_df = pd.DataFrame()
     
     # CHANGE THIS during deployment. This is dummy data
-    # current_player_df = pd.read_csv('player_stats_initial.csv')
+    # current_player_df = pd.read_csv('static/player_stats_initial.csv')
+
     teams_df = extract_teams_data(overview_data_json)
     player_types_df = extract_player_types(overview_data_json)
     current_player_df = extract_player_roster(overview_data_json, player_types_df, teams_df)
@@ -714,29 +725,43 @@ def predict_team(transfer = False, wildcard = False, gw = 1, \
                                                                      transfer, wildcard, gw, \
                                                                      budget, form_weight, \
                                                                      current_team, num_transfers)
+        # LOG - PRINT PREDICTED TEAM
+        # print(long_form)
+
         return long_form, points, team_cost
     elif gw > 1 and gw <= 4:
         long_form, points, team_cost = analyze_using_mixed_season_data(max_players_from_team,\
                                                                        transfer, wildcard, gw,\
                                         budget, old_data_weight, new_data_weight, form_weight,\
                                                                        current_team, num_transfers)
+        # LOG - PRINT PREDICTED TEAM
+        # print(long_form)
+
         return long_form, points, team_cost
     elif gw == 1:
         long_form, points, team_cost = analyze_using_old_season_data(\
                                                     max_players_from_team, \
                                                     transfer, wildcard, gw, budget)
+        # LOG - PRINT PREDICTED TEAM
+        # print(long_form)
+        
         return long_form, points, team_cost
 
 
-# if name == '__main__()':
-# 	overview_data_json = get_overview_data()
-# 	teams_df = extract_teams_data(overview_data_json)
-# 	player_types_df = extract_player_types(overview_data_json)
-# 	player_df = extract_player_roster(overview_data_json)
-# 	make_dirs()
-# 	save_teams_csv(teams_df)
-# 	save_player_types_csv(player_types_df)
-# 	save_player_csv(player_df)
-# 	predict_team(transfer = False, wildcard = False, gw = 1, \
+# LOG - TEST CODE
+# overview_data_json = get_overview_data()
+# teams_df = extract_teams_data(overview_data_json)
+# player_types_df = extract_player_types(overview_data_json)
+# player_df = extract_player_roster(overview_data_json, player_types_df, teams_df)
+# make_dirs()
+# save_teams_csv(teams_df)
+# save_player_types_csv(player_types_df)
+# save_player_csv(player_df)
+
+# LOG - MAX PLAYERS FROM TEAM FOR TESTING
+# max_players_from_team = {'ARS': 3, 'AVL': 3, 'BRE': 3, 'BHA': 3, 'BUR': 3, 'CHE': 3, 'CRY': 3, 'EVE': 3, 'LEE': 3, 'LIV': 3, \
+#                          'LEI': 3, 'MCI': 3, 'MUN': 3, 'NEW': 3, 'NOR': 3, 'SOU': 3, 'TOT': 3, 'WAT': 3, 'WHU': 3, 'WOL': 3 }
+
+# predict_team(transfer = False, wildcard = True, gw = 1, \
 #                  budget = 1000, old_data_weight = 0.4, new_data_weight = 0.6, form_weight = 0.5, \
-#                  max_players_from_team = None, current_team = None, num_transfers = 1)
+#                  max_players_from_team = max_players_from_team, current_team = None, num_transfers = 1)
