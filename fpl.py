@@ -748,20 +748,19 @@ def predict_team(transfer = False, wildcard = False, gw = 1, \
         return long_form, points, team_cost
 
 
-# LOG - TEST CODE
-# overview_data_json = get_overview_data()
-# teams_df = extract_teams_data(overview_data_json)
-# player_types_df = extract_player_types(overview_data_json)
-# player_df = extract_player_roster(overview_data_json, player_types_df, teams_df)
-# make_dirs()
-# save_teams_csv(teams_df)
-# save_player_types_csv(player_types_df)
-# save_player_csv(player_df)
+if __name__ == '__main__':
+    overview_data_json = get_overview_data()
+    teams_df = extract_teams_data(overview_data_json)
+    player_types_df = extract_player_types(overview_data_json)
+    player_df = extract_player_roster(overview_data_json, player_types_df, teams_df)
+    print("player_df", player_df)
+    make_dirs()
+    save_teams_csv(teams_df)
+    save_player_types_csv(player_types_df)
+    save_player_csv(player_df)
+    max_players_from_team = {'ARS': 3, 'AVL': 3, 'BRE': 3, 'BHA': 3, 'BUR': 3, 'CHE': 3, 'CRY': 3, 'EVE': 3, 'LEE': 3, 'LIV': 3, 'LEI': 3, 'MCI': 3, 'MUN': 3, 'NEW': 3, 'NOR': 3, 'SOU': 3, 'TOT': 3, 'WAT': 3, 'WHU': 3, 'WOL': 3}
+    predict_team(transfer = False, wildcard = True, gw = 3, budget = 1000, old_data_weight = 0.4, new_data_weight = 0.6, form_weight = 0.5, max_players_from_team = max_players_from_team, current_team = None, num_transfers = 1)
 
 # LOG - MAX PLAYERS FROM TEAM FOR TESTING
-# max_players_from_team = {'ARS': 3, 'AVL': 3, 'BRE': 3, 'BHA': 3, 'BUR': 3, 'CHE': 3, 'CRY': 3, 'EVE': 3, 'LEE': 3, 'LIV': 3, \
-#                          'LEI': 3, 'MCI': 3, 'MUN': 3, 'NEW': 3, 'NOR': 3, 'SOU': 3, 'TOT': 3, 'WAT': 3, 'WHU': 3, 'WOL': 3 }
 
-# predict_team(transfer = False, wildcard = True, gw = 1, \
-#                  budget = 1000, old_data_weight = 0.4, new_data_weight = 0.6, form_weight = 0.5, \
-#                  max_players_from_team = max_players_from_team, current_team = None, num_transfers = 1)
+

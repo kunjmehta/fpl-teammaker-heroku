@@ -36,6 +36,7 @@ st.markdown("<h1 style='text-align: center;'>Welcome to FPL TeamMaker</h1>", \
 			unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Use Data Science to build your \
 			team and win!</h3>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center;'>Updated player data for the 2021-22 season</h5>", unsafe_allow_html=True)
 
 transfer = False
 wildcard = False
@@ -148,75 +149,75 @@ if st.button('Get Team'):
 		st.info('Please use this feature after GW4 has completed')
 
 
-st.markdown("<h1 style='text-align: center;'>Visualization of Results</h1>", unsafe_allow_html=True)
+# st.markdown("<h1 style='text-align: center;'>Visualization of Results</h1>", unsafe_allow_html=True)
 
 
-bot101_points = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-,  np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+# bot101_points = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# ,  np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-average_points = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+# average_points = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-bot101_rank = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+# bot101_rank = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-bot101_gwrank = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+# bot101_gwrank = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-bot101_gw_points = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, \
-np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+# bot101_gw_points = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, \
+# np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-bot101_gw_avg_points = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, \
-np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
-, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
+# bot101_gw_avg_points = np.array([0, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, \
+# np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan\
+# , np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan])
 
-gameweeks = [i for i in range(0, 39)]
+# gameweeks = [i for i in range(0, 39)]
 
-fig = plt.figure()
-ax = plt.gca()
-ax.set_xlim(0,39)
-plt.plot(gameweeks, bot101_points, label = 'Cumulative Team Points')
-plt.plot(gameweeks, average_points, label = 'Cumulative Average Points')
-plt.xlabel('Gameweeks')
-plt.ylabel('Total Points')
-plt.title('Total Points Viewed per Week')
-plt.legend()
-plt.locator_params(axis="x", nbins=38)
-st.pyplot(fig)
+# fig = plt.figure()
+# ax = plt.gca()
+# ax.set_xlim(0,39)
+# plt.plot(gameweeks, bot101_points, label = 'Cumulative Team Points')
+# plt.plot(gameweeks, average_points, label = 'Cumulative Average Points')
+# plt.xlabel('Gameweeks')
+# plt.ylabel('Total Points')
+# plt.title('Total Points Viewed per Week')
+# plt.legend()
+# plt.locator_params(axis="x", nbins=38)
+# st.pyplot(fig)
 
-fig = plt.figure()
-ax = plt.gca()
-ax.invert_yaxis()
-ax.ticklabel_format(useOffset=False, style = 'plain') 
-plt.locator_params(axis="y", nbins=20)
-plt.locator_params(axis="x", nbins=38)
+# fig = plt.figure()
+# ax = plt.gca()
+# ax.invert_yaxis()
+# ax.ticklabel_format(useOffset=False, style = 'plain') 
+# plt.locator_params(axis="y", nbins=20)
+# plt.locator_params(axis="x", nbins=38)
 
-ax.set_xlim(0,39)
-plt.plot(gameweeks, bot101_rank, label = 'Overall Rank')
-plt.plot(gameweeks, bot101_gwrank, label = 'GW Rank')
-plt.xlabel('Gameweeks')
-plt.ylabel('Ranking (in millions)')
-plt.title('Overall vs GW Rank')
-plt.legend()
-st.pyplot(fig)
+# ax.set_xlim(0,39)
+# plt.plot(gameweeks, bot101_rank, label = 'Overall Rank')
+# plt.plot(gameweeks, bot101_gwrank, label = 'GW Rank')
+# plt.xlabel('Gameweeks')
+# plt.ylabel('Ranking (in millions)')
+# plt.title('Overall vs GW Rank')
+# plt.legend()
+# st.pyplot(fig)
 
-fig = plt.figure()
-ax = plt.gca()
-ax.set_xlim(0,39)
-plt.plot(gameweeks, bot101_gw_points, label = 'Team Points per Gameweek')
-plt.plot(gameweeks, bot101_gw_avg_points, label = 'Average Points per Gameweek')
-plt.xlabel('Gameweeks')
-plt.ylabel('Points')
-plt.title('Points per Week')
-plt.legend()
-plt.locator_params(axis="x", nbins=38)
-st.pyplot(fig)
+# fig = plt.figure()
+# ax = plt.gca()
+# ax.set_xlim(0,39)
+# plt.plot(gameweeks, bot101_gw_points, label = 'Team Points per Gameweek')
+# plt.plot(gameweeks, bot101_gw_avg_points, label = 'Average Points per Gameweek')
+# plt.xlabel('Gameweeks')
+# plt.ylabel('Points')
+# plt.title('Points per Week')
+# plt.legend()
+# plt.locator_params(axis="x", nbins=38)
+# st.pyplot(fig)
