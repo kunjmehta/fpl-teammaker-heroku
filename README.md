@@ -11,7 +11,7 @@ standings in the Fantasy Premier League.
 * **Challenge:** Analyzing and recognizing the appropriate features that can provide the best prediction with regards to the team, and deploying the application without
 hassles.
 
-* **Accomplishment:** The application has been deployed on Heroku and the team that was entered into the competition on the basis of the results obtained from this application finished in the top 2% of players out of a total of 8 million.
+* **Accomplishment:** The application has been deployed on Heroku / Streamlit and the team that was entered into the competition on the basis of the results obtained from this application finished in the top 2% of players out of a total of 8.2 million.
 
 ***
 
