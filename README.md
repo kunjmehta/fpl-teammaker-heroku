@@ -1,6 +1,8 @@
 # FPL TeamMaker
 <h5> Application that predicts the best teams week-wise to enter in the Fantasy Premier League. </h5>
 
+<h4>No longer being actively maintained and won't be updated for the 2022-2023 season. Pull Requests accepted</h4>
+
 -----------------------------------------
 ### Motivation, Challenge & Accomplishment
 
