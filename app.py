@@ -36,7 +36,7 @@ st.markdown("<h1 style='text-align: center;'>Welcome to FPL TeamMaker</h1>", \
 			unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Use Data Science to build your \
 			team and win!</h3>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: center;'>Updated player data for the 2021-22 season</h5>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center;'>Updated player data for the 2022-23 season</h5>", unsafe_allow_html=True)
 
 transfer = False
 wildcard = False
