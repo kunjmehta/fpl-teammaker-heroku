@@ -23,9 +23,8 @@ def extract_teams_data(overview_data_json):
     teams_df = pd.DataFrame(teams_json)
     teams_df = teams_df[['code', 'name', 'short_name', 'position', 'played', 'win', 'draw', \
                          'loss', 'points']]
-    teams_df['past_position'] = pd.Series([8, 11, 99, 16, 17, 4, 14, 10, 9, 5, 3, 1, 2, 12, \
-                                           99, 15, 7, 99, 6, 13])
-
+    teams_df['past_position'] = pd.Series([5, 14, 99, 13, 9, 3, 12, 16, 99, 17, 8, 2, 1, 6, \
+                                           11, 99, 15, 4, 7, 10])
     return teams_df
 
 '''Extract the different types of positions of players from the overview data'''
@@ -758,7 +757,7 @@ if __name__ == '__main__':
     save_teams_csv(teams_df)
     save_player_types_csv(player_types_df)
     save_player_csv(player_df)
-    max_players_from_team = {'ARS': 3, 'AVL': 3, 'BRE': 3, 'BHA': 3, 'BUR': 3, 'CHE': 3, 'CRY': 3, 'EVE': 3, 'LEE': 3, 'LIV': 3, 'LEI': 3, 'MCI': 3, 'MUN': 3, 'NEW': 3, 'NOR': 3, 'SOU': 3, 'TOT': 3, 'WAT': 3, 'WHU': 3, 'WOL': 3}
+    max_players_from_team = {'ARS': 3, 'AVL': 3, 'BOU': 3, 'BRE': 3, 'BHA': 3, 'CHE': 3, 'CRY': 3, 'EVE': 3, 'FUL': 3, 'LEE': 3, 'LIV': 3, 'LEI': 3, 'MCI': 3, 'MUN': 3, 'NEW': 3, 'NFO': 3, 'SOU': 3, 'TOT': 3, 'WHU': 3, 'WOL': 3}
     predict_team(transfer = False, wildcard = True, gw = 3, budget = 1000, old_data_weight = 0.4, new_data_weight = 0.6, form_weight = 0.5, max_players_from_team = max_players_from_team, current_team = None, num_transfers = 1)
 
 # LOG - MAX PLAYERS FROM TEAM FOR TESTING

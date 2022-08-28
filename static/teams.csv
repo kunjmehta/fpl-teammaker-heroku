@@ -1,21 +1,21 @@
 code,name,short_name,position,played,win,draw,loss,points,past_position
-3,Arsenal,ARS,0,0,0,0,0,0,8
-7,Aston Villa,AVL,0,0,0,0,0,0,11
-94,Brentford,BRE,0,0,0,0,0,0,99
-36,Brighton,BHA,0,0,0,0,0,0,16
-90,Burnley,BUR,0,0,0,0,0,0,17
-8,Chelsea,CHE,0,0,0,0,0,0,4
-31,Crystal Palace,CRY,0,0,0,0,0,0,14
-11,Everton,EVE,0,0,0,0,0,0,10
-13,Leicester,LEI,0,0,0,0,0,0,9
-2,Leeds,LEE,0,0,0,0,0,0,5
-14,Liverpool,LIV,0,0,0,0,0,0,3
+3,Arsenal,ARS,0,0,0,0,0,0,5
+7,Aston Villa,AVL,0,0,0,0,0,0,14
+91,Bournemouth,BOU,0,0,0,0,0,0,99
+94,Brentford,BRE,0,0,0,0,0,0,13
+36,Brighton,BHA,0,0,0,0,0,0,9
+8,Chelsea,CHE,0,0,0,0,0,0,3
+31,Crystal Palace,CRY,0,0,0,0,0,0,12
+11,Everton,EVE,0,0,0,0,0,0,16
+54,Fulham,FUL,0,0,0,0,0,0,99
+13,Leicester,LEI,0,0,0,0,0,0,17
+2,Leeds,LEE,0,0,0,0,0,0,8
+14,Liverpool,LIV,0,0,0,0,0,0,2
 43,Man City,MCI,0,0,0,0,0,0,1
-1,Man Utd,MUN,0,0,0,0,0,0,2
-4,Newcastle,NEW,0,0,0,0,0,0,12
-45,Norwich,NOR,0,0,0,0,0,0,99
+1,Man Utd,MUN,0,0,0,0,0,0,6
+4,Newcastle,NEW,0,0,0,0,0,0,11
+17,Nott'm Forest,NFO,0,0,0,0,0,0,99
 20,Southampton,SOU,0,0,0,0,0,0,15
-6,Spurs,TOT,0,0,0,0,0,0,7
-57,Watford,WAT,0,0,0,0,0,0,99
-21,West Ham,WHU,0,0,0,0,0,0,6
-39,Wolves,WOL,0,0,0,0,0,0,13
+6,Spurs,TOT,0,0,0,0,0,0,4
+21,West Ham,WHU,0,0,0,0,0,0,7
+39,Wolves,WOL,0,0,0,0,0,0,10
