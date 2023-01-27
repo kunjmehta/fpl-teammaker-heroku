@@ -1,8 +1,6 @@
 # FPL TeamMaker
 <h5> Application that predicts the best teams week-wise to enter in the Fantasy Premier League. </h5>
 
-<h4>No longer being actively maintained and won't be updated for the 2022-2023 season. Pull Requests accepted</h4>
-
 -----------------------------------------
 ### Motivation, Challenge & Accomplishment
 
@@ -28,7 +26,7 @@ hassles.
 
 ### Website 
 
-You can access and use the application [here](https://share.streamlit.io/kunjmehta/fpl-teammaker-heroku/2021/22/app.py)
+You can access and use the application [here](https://kunjmehta-fpl-teammaker-heroku-app-202223-ohxmbz.streamlit.app/)
 
 ### Article 
 An article covering the use of data analysis in fantasy contests with this application as the case study can be found on [Medium](https://towardsdatascience.com/fantasy-premier-league-x-data-analysis-being-among-the-top-2-98a714a1d170?gi=dba0497b9cd)
