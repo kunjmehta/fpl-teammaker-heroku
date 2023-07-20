@@ -26,7 +26,7 @@ hassles.
 
 ### Website 
 
-You can access and use the application [here](https://fpl-teammaker.herokuapp.com)
+You can access and use the application [here]([https://fpl-teammaker.herokuapp.com](https://fpl-teammaker.streamlit.app/))
 
 ### Article 
 An article covering the use of data analysis in fantasy contests with this application as the case study can be found on [Medium](https://towardsdatascience.com/fantasy-premier-league-x-data-analysis-being-among-the-top-2-98a714a1d170?gi=dba0497b9cd)
