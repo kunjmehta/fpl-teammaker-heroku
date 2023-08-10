@@ -81,9 +81,7 @@ elif gw > 1 and gw <= 4:
 		player_df = extract_player_roster(overview_data_json, player_types_df, teams_df)
 		player_df = player_df[['code', 'first_name', 'second_name', 'team_code']]
 		player_df['name'] = player_df['first_name'] + ' ' + player_df['second_name']
-		players = st.write('Please look at the list below and enter a comma \
-								 separated list of player codes you have in your team. \
-								 Note that they are ordered alphabetically by team name.', \
+		players = st.write('Please select players you have in your team.', \
 								 player_df[['code', 'name', 'team_code']])
 		try:
 			current_team = st.multiselect('', player_df['name'])
