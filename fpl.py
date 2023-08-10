@@ -84,7 +84,7 @@ def save_player_types_csv(player_types_df):
 
 '''Function to save player roster data of last season which is static'''
 def save_player_csv(player_df):
-    player_df.to_csv('static/player_stats_initial.csv', index = False)
+    player_df.to_csv('static/player_stats_new_season.csv', index = False)
 
 
 '''Get and return the list of injured players for current GW'''
@@ -256,18 +256,47 @@ def transfer_players_using_lp(metric, costs, player_type, team, budget, team_cou
 def analyze_using_old_season_data(max_players_from_team, transfer, wildcard, gw, budget):
     player_df = pd.read_csv('static/player_stats_initial.csv')
     teams_df = pd.read_csv('static/teams.csv')
+    new_player_df = pd.read_csv('static/player_stats_new_season.csv')
     injured_players_df = get_injured_player_list()
-    
+
+    # update new season cost for previous season's players
+    for idx in range(len(player_df)):
+        code = player_df.loc[idx, 'code']
+        try:
+            now_cost = new_player_df[new_player_df['code'] == code]['now_cost']
+            player_df.loc[idx, 'now_cost'] = now_cost.values[0]
+        except:
+            continue
+
+    # update new availability for previous season's players
+    for idx in range(len(player_df)):
+        code = player_df.loc[idx, 'code']
+        try:
+            new_availability = new_player_df[new_player_df['code'] == code]['status']
+            player_df.loc[idx, 'status'] = new_availability.values[0]
+        except:
+            continue
+
+    # update new player type for previous season's players
+    for idx in range(len(player_df)):
+        code = player_df.loc[idx, 'code']
+        try:
+            new_availability = new_player_df[new_player_df['code'] == code]['player_type']
+            player_df.loc[idx, 'player_type'] = new_availability.values[0]
+        except:
+            continue
+
     # get list of available players for GW = 1
-    available_players = player_df[~player_df['status'].isin(injured_players_df['status'])]
+    available_players = player_df[player_df['code'].isin(new_player_df['code'])]
+    available_players = available_players[available_players['status'].isin(['a', 'd'])]
     
     # calculate ROI based on current price and sort on it
     available_players['ROI'] = available_players['total_points']/ (0.1* \
                                                                    available_players['now_cost'])
     available_players = available_players.copy().sort_values(by = ['ROI'], ascending = False)
 
-    # Get the last season's top teams' players
-    top_teams = teams_df.copy().sort_values(by='past_position')['short_name'].iloc[:20]
+    # Get the last season's top teams' players - NOT ACTIVE RIGHT NOW
+    top_teams = teams_df.copy().sort_values(by='past_position')['short_name'].iloc[:20] # NOT ACTIVE
     top_team_players = available_players[available_players['team_code'].isin(top_teams.tolist())]
     
     # Initialize data structures to track constraints
@@ -758,9 +787,9 @@ if __name__ == '__main__':
     make_dirs()
     save_teams_csv(teams_df)
     save_player_types_csv(player_types_df)
-    # save_player_csv(player_df)
+    save_player_csv(player_df)
     max_players_from_team = {'ARS': 3, 'AVL': 3, 'BOU': 3, 'BRE': 3, 'BHA': 3, 'BUR':3, 'CHE': 3, 'CRY': 3, 'EVE': 3, 'FUL': 3, 'LIV': 3, 'LUT': 3, 'MCI': 3, 'MUN': 3, 'NEW': 3, 'NFO': 3, 'SHU': 3, 'TOT': 3, 'WHU': 3, 'WOL': 3}
-    predict_team(transfer = False, wildcard = True, gw = 3, budget = 1000, old_data_weight = 0.4, new_data_weight = 0.6, form_weight = 0.5, max_players_from_team = max_players_from_team, current_team = None, num_transfers = 1)
+    predict_team(transfer = False, wildcard = True, gw = 1, budget = 1000, old_data_weight = 0.4, new_data_weight = 0.6, form_weight = 0.5, max_players_from_team = max_players_from_team, current_team = None, num_transfers = 1)
 
 
 
